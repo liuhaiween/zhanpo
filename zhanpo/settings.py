@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Django settings for jumpserver project.
+Django settings for zhanpo project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -38,6 +38,7 @@ INSTALLED_APPS = (
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'zhanyueuser',
+	'zhanyueBase',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,8 +88,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_URL = '/static/'
-
 TEMPLATE_DIRS = (
 os.path.join(BASE_DIR, 'templates'),
 )
@@ -106,4 +105,4 @@ EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 "10分钟不操作,重启登录(秒)"
-timeout=60*60*24
+timeout=6

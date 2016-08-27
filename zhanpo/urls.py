@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from zhanyueuser.views import index
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -19,4 +20,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    #"用户处理模块"
+    url(r'^zuser/', include('zhanyueuser.urls')),
+
+    #首页
+    url(r'^$', index),
 )
